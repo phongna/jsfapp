@@ -1,19 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>hub-ear</artifactId>
+	<artifactId>jsfapp-ear</artifactId>
 	<packaging>ear</packaging>
 	<parent>
-		<artifactId>hub</artifactId>
-		<groupId>vn.com.aisoft</groupId>
+		<artifactId>jsfapp</artifactId>
+		<groupId>com.jsfapp</groupId>
 		<version>1.0.0</version>
 	</parent>
 
 	<dependencies>
 		<!-- web and ejb modules -->
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-common</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-common</artifactId>
 			<version>1.0.0</version>
 			<type>jar</type>
 			<exclusions>
@@ -24,8 +24,8 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-dao</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-dao</artifactId>
 			<version>1.0.0</version>
 			<type>jar</type>
 			<exclusions>
@@ -36,20 +36,20 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-dto</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-dto</artifactId>
 			<version>1.0.0</version>
 			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-client</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-client</artifactId>
 			<version>1.0.0</version>
 			<type>jar</type>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-business</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-business</artifactId>
 			<version>1.0.0</version>
 			<type>ejb</type>
 			<exclusions>
@@ -60,21 +60,22 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-web</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-web</artifactId>
 			<version>1.0.0</version>
 			<type>war</type>
 		</dependency>
-
+<!--  
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
+			<groupId>com.jsfapp</groupId>
 			<artifactId>pdf-fonts</artifactId>
 			<version>1.0</version>
 		</dependency>
+		-->
 	</dependencies>
 
 	<build>
-		<finalName>hub</finalName>
+		<finalName>jsfapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -87,43 +88,43 @@
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>2.9.1</version>
 				<configuration>
-					<applicationName>hub</applicationName>
-					<displayName>hub</displayName>
+					<applicationName>jsfapp</applicationName>
+					<displayName>jsfapp</displayName>
 					<modules>
 						<jarModule>
-							<groupId>vn.com.aisoft</groupId>
-							<artifactId>hub-common</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<artifactId>jsfapp-common</artifactId>
 						</jarModule>
 						<jarModule>
-							<groupId>vn.com.aisoft</groupId>
-							<artifactId>hub-dao</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<artifactId>jsfapp-dao</artifactId>
 						</jarModule>
 						<jarModule>
-							<groupId>vn.com.aisoft</groupId>
-							<artifactId>hub-dto</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<artifactId>jsfapp-dto</artifactId>
 						</jarModule>
 						<jarModule>
-							<groupId>vn.com.aisoft</groupId>
-							<artifactId>hub-client</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<artifactId>jsfapp-client</artifactId>
 						</jarModule>
 						<webModule>
-							<artifactId>hub-web</artifactId>
-							<groupId>vn.com.aisoft</groupId>
-							<contextRoot>/hub</contextRoot>
+							<artifactId>jsfapp-web</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<contextRoot>/jsfapp</contextRoot>
 						</webModule>
 						<ejbModule>
-							<groupId>vn.com.aisoft</groupId>
-							<artifactId>hub-business</artifactId>
+							<groupId>com.jsfapp</groupId>
+							<artifactId>jsfapp-business</artifactId>
 						</ejbModule>
 					</modules>
 					<generateApplicationXml>true</generateApplicationXml>
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
-					<outputDirectory>D:\apps\wildfly-8.1.0.Hub\standalone\deployments</outputDirectory>
+					<outputDirectory>D:\apps\wildfly-8.2.1.Final\standalone\deployments</outputDirectory>
 				</configuration>
 			</plugin>
 			<!-- WildFly plugin to deploy ear -->
 			<!-- <plugin> <groupId>org.wildfly.plugins</groupId> <artifactId>wildfly-maven-plugin</artifactId> <version>1.0.2.Final</version> 
-				<configuration> <filename>hub.ear</filename> <skip>false</skip> </configuration> </plugin> -->
+				<configuration> <filename>jsfapp.ear</filename> <skip>false</skip> </configuration> </plugin> -->
 		</plugins>
 	</build>
 </project>

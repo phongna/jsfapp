@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>hub-business</artifactId>
+	<artifactId>jsfapp-business</artifactId>
 	<packaging>ejb</packaging>
 
 	<parent>
-		<artifactId>hub</artifactId>
-		<groupId>vn.com.aisoft</groupId>
+		<artifactId>jsfapp</artifactId>
+		<groupId>com.jsfapp</groupId>
 		<version>1.0.0</version>
 	</parent>
 	<properties>
@@ -17,26 +17,26 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-common</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-common</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-dao</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-dao</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-dto</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-dto</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-client</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-client</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
@@ -116,7 +116,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>hub-business</finalName>
+		<finalName>jsfapp-business</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

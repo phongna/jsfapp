@@ -1,25 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>hub-client</artifactId>
+	<artifactId>jsfapp-client</artifactId>
 	<packaging>jar</packaging>
 
 	<parent>
-		<artifactId>hub</artifactId>
-		<groupId>vn.com.aisoft</groupId>
+		<artifactId>jsfapp</artifactId>
+		<groupId>com.jsfapp</groupId>
 		<version>1.0.0</version>
 	</parent>
 	
 	<dependencies>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-common</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-common</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>vn.com.aisoft</groupId>
-			<artifactId>hub-dto</artifactId>
+			<groupId>com.jsfapp</groupId>
+			<artifactId>jsfapp-dto</artifactId>
 			<version>1.0.0</version>
 			<scope>provided</scope>
 		</dependency>
@@ -36,7 +36,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<build>
-		<finalName>hub-client</finalName>
+		<finalName>jsfapp-client</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
