@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %m%n" />
+		</layout>
+	</appender>
+	<appender name="logfile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/hub.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="logservice" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/service.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="logadmin" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/admin.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p] %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="HUB" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="logfile" />
+	</logger>
+	<root>
+		<priority value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</log4j:configuration>
